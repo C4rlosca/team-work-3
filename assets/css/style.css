@@ -6,4 +6,365 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  list-style: none;
+}
+div.ejemplo {
+  display: block;
+  margin: 1em;
+  font-size: 4em;
+  background-color: white;
+  color: red;
+}
+/*-----DESKTOP---------------------------------------------------*/
+@media screen and (min-width: 960px) {
+  /* ELIMINAR */
+  /* body {
+    background-image: url("../../img/slider/1.jpg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: repeat;
+    position: relative;
+  } */
+  header {
+    position: fixed;
+    top: -100%;
+    z-index: 99;
+    /* margin-top: -3em; */
+    display: flex;
+    width: 100%;
+    /* ELIMINAR */
+    /* background-color: rgba(255, 0, 0, 0.278); */
+    transition: all 0.5s ease;
+  }
+  header.up {
+    top: 0;
+    transition: all 1.2s ease-in;
+    -webkit-transition: all 1.2s ease-in;
+  }
+  /* ----------PROPUESTA---------- */
+  header.readable {
+    /*background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );*/
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+  }
+  header section.top {
+    width: 50%;
+    flex-shrink: 9;
+    display: flex;
+    padding: 3em 4em;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header section.top span {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    text-shadow: .05em .05em .2em #28282855;
+  }
+  header section.top span.colored {
+    color: #ffc311;
+  }
+  header section img {
+    display: none;
+  }
+  header section.side {
+    flex-shrink: 1;
+    /* width: 50%; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5em 6em 1em 2em;
+    font-size: 1.3rem;
+    text-shadow: .05em .05em .2em #28282855;
+  }
+  header section.side nav.social {
+    order: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 1em;
+  }
+  header section.side nav.social .fa-brands {
+    color: white;
+    transition: color 0.3s ease-out;
+    font-size: 1.3em;
+  }
+  header section.side nav.social .fa-brands:hover {
+    color: #ffc311;
+    transition: color 0.2s ease-out;
+    cursor: pointer;
+  }
+  header section.side div.enter {
+    order: 2;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0 3em;
+  }
+  header section.side div.enter button {
+    background-color: #ffc311;
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    width: 45%;
+    padding: 0.5em 1em;
+    margin: auto 0;
+    border: 1px outset #2828281d;
+    transition: color 0.2s ease-in-out;
+    white-space: nowrap;
+  }
+  header section.side div.enter button:first-child {
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+  }
+  header section.side div.enter button:last-child {
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+  }
+  header section.side div.enter button:hover {
+    color: black;
+    transition: color 0.2s ease-in-out;
+  }
+  header section.side nav.menu {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+    text-shadow: .05em .05em .2em #28282855;
+  }
+  header section.side nav.menu li {
+    display: inline;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    transition: color 0.2s ease-in-out;
+  }
+  header section.side nav.menu li:hover {
+    color: #ffc311;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+  }
+}
+/*-----TABLET------------------------------------------------*/
+@media screen and (max-width: 992px) {
+  /* ELIMINAR */
+  body {
+    background-color: crimson;
+  }
+  header section.top {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 2.5em 2em;
+    justify-content: space-between;
+  }
+  header section.top span {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 2rem;
+  }
+  header section.top span.colored {
+    color: #ffc311;
+  }
+  header section.top div.burger {
+    background-color: #282828;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header section.top div.burger img {
+    width: 1.5rem;
+  }
+  header section.side {
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    right: 0;
+    top: 0;
+    background-color: #282828;
+    padding: 0 2rem 0 1rem;
+    transition: all 0.5s ease-in-out;
+  }
+  header section.side.hidden {
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+  header section.side img {
+    margin: 3.5rem 0 0 0;
+    font-size: 1rem;
+    width: 1.2em;
+    margin-left: 92%;
+  }
+  header section.side nav.menu {
+    margin-top: -1.2em;
+  }
+  header section.side nav.menu li {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    border-bottom: 1px solid white;
+  }
+  header section.side nav.menu li:first-child {
+    margin-right: 5em;
+  }
+  header section.side nav.menu li:nth-child(2),
+  header section.side nav.menu li:nth-child(3),
+  header section.side nav.menu li:nth-child(4),
+  header section.side nav.menu li:nth-child(5) {
+    margin: 2rem 0 0 0;
+  }
+  header section.side nav.menu li:hover {
+    padding: 0 0 0 1em;
+    transition: padding 0.1s ease-in-out;
+  }
+  header section.side nav.social {
+    display: flex;
+    justify-content: space-around;
+    margin: 2.5em 1em 2em;
+  }
+  header section.side nav.social .fa-brands {
+    color: white;
+    transition: color 0.3s ease-out;
+  }
+  header section.side nav.social .fa-brands:hover {
+    color: #ffc311;
+    transition: color 0.2s ease-out;
+  }
+  header section.side div.enter {
+    display: flex;
+    justify-content: center;
+  }
+  header section.side div.enter button {
+    background-color: #ffc311;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    width: 50%;
+    padding: 0.5em 0;
+    border: 1px outset #2828281d;
+    transition: color 0.2s ease-in-out;
+  }
+  header section.side div.enter button:hover {
+    color: black;
+    transition: color 0.2s ease-in-out;
+  }
+}
+/*-----MOBILE-------------------------------------------------*/
+@media screen and (max-width: 450px) {
+  /* ELIMINAR */
+  body {
+    background-color: cornflowerblue;
+  }
+  header {
+    display: flex;
+    justify-content: end;
+  }
+  header section.top {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 1.5em 1.5em;
+    justify-content: space-between;
+  }
+  header section.top span {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.8rem;
+  }
+  header section.top span.colored {
+    color: #ffc311;
+  }
+  header section.top div.burger {
+    background-color: #282828;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header section.top div.burger img {
+    width: 1.2em;
+  }
+  header section.side {
+    width: 70%;
+    height: 100%;
+    background-color: #282828;
+    position: absolute;
+    padding: 0 1.5rem 0 1rem;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  header section.side.hidden {
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+  header section.side img {
+    margin: 2.4rem 1rem 0 85%;
+    font-size: 1.2rem;
+    width: 1.2em;
+  }
+  header section.side nav.menu {
+    margin-top: 0;
+  }
+  header section.side nav.menu li:first-child {
+    margin-right: 0;
+  }
+  header section.side nav.menu li:nth-child(2),
+  header section.side nav.menu li:nth-child(3),
+  header section.side nav.menu li:nth-child(4),
+  header section.side nav.menu li:nth-child(5) {
+    margin: 2rem 0 0 0;
+  }
+  header section.side nav.menu li {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.7rem;
+    border-bottom: 1px solid white;
+  }
+  header section.side nav.menu li:hover {
+    padding: 0 0 0 1em;
+    transition: padding 0.1s ease-in-out;
+  }
+  header section.side nav.social {
+    display: flex;
+    justify-content: space-around;
+    margin: 2.5em 1em 2em;
+  }
+  header section.side nav.social .fa-brands {
+    color: white;
+    transition: color 0.3s ease-out;
+  }
+  header section.side nav.social .fa-brands:hover {
+    color: #ffc311;
+    transition: color 0.2s ease-out;
+  }
+  header section.side div.enter {
+    display: flex;
+    justify-content: center;
+  }
+  header section.side div.enter button {
+    background-color: #ffc311;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    width: 50%;
+    padding: 0.5em 0;
+    border: 1px outset #2828281d;
+    transition: color 0.2s ease-in-out;
+  }
+  header section.side div.enter button:hover {
+    color: black;
+    transition: color 0.2s ease-in-out;
+  }
 }
