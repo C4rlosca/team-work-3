@@ -8,32 +8,14 @@
   box-sizing: border-box;
   list-style: none;
 }
-div.ejemplo {
-  display: block;
-  margin: 1em;
-  font-size: 4em;
-  background-color: white;
-  color: red;
-}
 /*-----DESKTOP---------------------------------------------------*/
 @media screen and (min-width: 960px) {
-  /* ELIMINAR */
-  /* body {
-    background-image: url("../../img/slider/1.jpg");
-    background-size: contain;
-    background-position: top;
-    background-repeat: repeat;
-    position: relative;
-  } */
   header {
     position: fixed;
     top: -100%;
     z-index: 99;
-    /* margin-top: -3em; */
     display: flex;
     width: 100%;
-    /* ELIMINAR */
-    /* background-color: rgba(255, 0, 0, 0.278); */
     transition: all 0.5s ease;
   }
   header.up {
@@ -52,6 +34,7 @@ div.ejemplo {
     transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;
   }
+  /* ----- */
   header section.top {
     width: 50%;
     flex-shrink: 9;
@@ -75,7 +58,6 @@ div.ejemplo {
   }
   header section.side {
     flex-shrink: 1;
-    /* width: 50%; */
     display: flex;
     flex-wrap: wrap;
     padding: 1.5em 6em 1em 2em;
@@ -156,10 +138,6 @@ div.ejemplo {
 }
 /*-----TABLET------------------------------------------------*/
 @media screen and (max-width: 992px) {
-  /* ELIMINAR */
-  body {
-    background-color: crimson;
-  }
   header section.top {
     width: 100%;
     background-color: white;
@@ -262,10 +240,6 @@ div.ejemplo {
 }
 /*-----MOBILE-------------------------------------------------*/
 @media screen and (max-width: 450px) {
-  /* ELIMINAR */
-  body {
-    background-color: cornflowerblue;
-  }
   header {
     display: flex;
     justify-content: end;
