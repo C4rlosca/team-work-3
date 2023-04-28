@@ -12,7 +12,6 @@ let ScrollPosition = 0;
 
 window.addEventListener("scroll", () => {
   const currentScrollPosition = window.pageYOffset;
-
   if (currentScrollPosition > ScrollPosition) {
     header.classList.remove("up");
   } else {
@@ -21,6 +20,5 @@ window.addEventListener("scroll", () => {
         header.classList.remove("readable")
     }, 200);
   }
-
   ScrollPosition = currentScrollPosition;
 });
